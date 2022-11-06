@@ -6,6 +6,12 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+type People struct {
+	Name   string
+	Age    int
+	Status string
+}
+
 func massage(c *gin.Context) {
 	test := SayPagi("Andika")
 	c.JSON(http.StatusOK, gin.H{
@@ -20,13 +26,21 @@ func action(c *gin.Context) {
 	c.JSON(http.StatusOK, combin)
 }
 func data(c *gin.Context) {
-	array := map[string]string{
-		"nama":  "Dominikus Andika Kurniawan",
-		"age":   "20",
-		"NIM":   "2440056972",
-		"Major": "Sistem Informasi dan Manajemen",
+	some := People{
+		Name:   "Lily Janvieka",
+		Age:    20,
+		Status: "Singgle",
 	}
-	c.JSON(http.StatusOK, array)
+	// array := map[string]string{
+	// 	"nama":  "Dominikus Andika Kurniawan",
+	// 	"age":   "20",
+	// 	"NIM":   "2440056972",
+	// 	"Major": "Sistem Informasi dan Manajemen",
+	// }
+	array1 := map[int]People{
+		1: some,
+	}
+	c.JSON(http.StatusOK, array1)
 }
 
 func Api() {
