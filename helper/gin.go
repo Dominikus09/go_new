@@ -26,9 +26,14 @@ func action(c *gin.Context) {
 	c.JSON(http.StatusOK, combin)
 }
 func data(c *gin.Context) {
-	some := People{
+	some1 := People{
 		Name:   "Lily Janvieka",
 		Age:    20,
+		Status: "Singgle",
+	}
+	some2 := People{
+		Name:   "Stephani Langi",
+		Age:    19,
 		Status: "Singgle",
 	}
 	// array := map[string]string{
@@ -38,7 +43,8 @@ func data(c *gin.Context) {
 	// 	"Major": "Sistem Informasi dan Manajemen",
 	// }
 	array1 := map[int]People{
-		1: some,
+		1: some1,
+		2: some2,
 	}
 	c.JSON(http.StatusOK, array1)
 }
