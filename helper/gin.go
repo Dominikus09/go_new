@@ -12,6 +12,11 @@ type People struct {
 	Status string
 }
 
+type Community struct {
+	communityName string
+	anggota       []People
+}
+
 func massage(c *gin.Context) {
 	test := SayPagi("Andika")
 	c.JSON(http.StatusOK, gin.H{
@@ -50,7 +55,11 @@ func data(c *gin.Context) {
 		some1,
 		some2,
 	}
-	c.JSON(http.StatusOK, array2)
+	himsisfo := Community{
+		communityName: "Himsisfo",
+		anggota:       array2[:],
+	}
+	c.JSON(http.StatusOK, himsisfo)
 }
 
 func Api() {
