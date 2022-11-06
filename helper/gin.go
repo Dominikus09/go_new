@@ -42,11 +42,15 @@ func data(c *gin.Context) {
 	// 	"NIM":   "2440056972",
 	// 	"Major": "Sistem Informasi dan Manajemen",
 	// }
-	array1 := map[int]People{
-		1: some1,
-		2: some2,
+	// array1 := map[int]People{
+	// 	1: some1,
+	// 	2: some2,
+	// }
+	array2 := [...]People{
+		some1,
+		some2,
 	}
-	c.JSON(http.StatusOK, array1)
+	c.JSON(http.StatusOK, array2)
 }
 
 func Api() {
