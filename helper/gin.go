@@ -31,16 +31,16 @@ func action(c *gin.Context) {
 	c.JSON(http.StatusOK, combin)
 }
 func data(c *gin.Context) {
-	some1 := People{
-		Name:   "Lily Janvieka",
-		Age:    20,
-		Status: "Singgle",
-	}
-	some2 := People{
-		Name:   "Stephani Langi",
-		Age:    19,
-		Status: "Singgle",
-	}
+	// some1 := People{
+	// 	Name:   "Lily Janvieka",
+	// 	Age:    20,
+	// 	Status: "Singgle",
+	// }
+	// some2 := People{
+	// 	Name:   "Stephani Langi",
+	// 	Age:    19,
+	// 	Status: "Singgle",
+	// }
 	// array := map[string]string{
 	// 	"nama":  "Dominikus Andika Kurniawan",
 	// 	"age":   "20",
@@ -58,8 +58,12 @@ func data(c *gin.Context) {
 	himsisfo := Community{
 		communityName: "Himsisfo",
 		anggota: []People{
-			some1,
-			some2,
+			People{Name: "Lily Janvieka",
+				Age:    20,
+				Status: "Singgle"},
+			People{Name: "Stephani Langi",
+				Age:    19,
+				Status: "Singgle"},
 		},
 	}
 	c.JSON(http.StatusOK, himsisfo)
