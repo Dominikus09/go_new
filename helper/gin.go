@@ -51,13 +51,16 @@ func data(c *gin.Context) {
 	// 	1: some1,
 	// 	2: some2,
 	// }
-	array2 := [...]People{
-		some1,
-		some2,
-	}
+	// array2 := [...]People{
+	// 	some1,
+	// 	some2,
+	// }
 	himsisfo := Community{
 		communityName: "Himsisfo",
-		anggota:       array2[:],
+		anggota: []People{
+			some1,
+			some2,
+		},
 	}
 	c.JSON(http.StatusOK, himsisfo)
 }
