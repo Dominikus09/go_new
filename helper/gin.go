@@ -58,12 +58,16 @@ func data(c *gin.Context) {
 	himsisfo := Community{
 		communityName: "Himsisfo",
 		anggota: []People{
-			People{Name: "Lily Janvieka",
+			{
+				Name:   "Lily Janvieka",
 				Age:    20,
-				Status: "Singgle"},
-			People{Name: "Stephani Langi",
-				Age:    19,
-				Status: "Singgle"},
+				Status: "Singgle",
+			},
+			{
+				Name:   "Lily Janvieka",
+				Age:    20,
+				Status: "Singgle",
+			},
 		},
 	}
 	c.JSON(http.StatusOK, himsisfo)
