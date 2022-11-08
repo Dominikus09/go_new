@@ -1,6 +1,7 @@
 package helper
 
 import (
+	"go_new/dummy"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -11,11 +12,20 @@ type People struct {
 	Age    int
 	Status string
 }
-
-type Community struct {
-	communityName string
-	anggota       []People
+type URI struct {
+	Details string
 }
+
+type Owner struct {
+	OwnerName string
+	Ig        string
+	Image     string
+}
+
+// type Community struct {
+// 	communityName string
+// 	anggota       []People
+// }
 
 func massage(c *gin.Context) {
 	test := SayPagi("Andika")
@@ -51,32 +61,66 @@ func data(c *gin.Context) {
 	// 	1: some1,
 	// 	2: some2,
 	// }
-	// array2 := [...]People{
-	// 	some1,
-	// 	some2,
+	som3 := Owner{
+		OwnerName: "Dominikus Andika Kurniawan",
+		Ig:        "dominikusandika",
+		Image:     "",
+	}
+	// details := URI{
+	// 	Details: "heloo",
 	// }
-	himsisfo := Community{
-		communityName: "Himsisfo",
-		anggota: []People{
-			{
-				Name:   "Lily Janvieka",
-				Age:    20,
-				Status: "Singgle",
-			},
-			{
-				Name:   "Lily Janvieka",
-				Age:    20,
-				Status: "Singgle",
-			},
+	array2 := [...]Owner{
+		som3,
+		{
+			OwnerName: "Dominikus Andika Kurniawan",
+			Ig:        "dominikusandika",
+			Image:     "",
+		},
+		{
+			OwnerName: "Dominikus Andika Kurniawan",
+			Ig:        "dominikusandika",
+			Image:     "",
+		},
+		{
+			OwnerName: "Dominikus Andika Kurniawan",
+			Ig:        "dominikusandika",
+			Image:     "",
+		},
+		{
+			OwnerName: "Dominikus Andika Kurniawan",
+			Ig:        "dominikusandika",
+			Image:     "",
 		},
 	}
-	c.JSON(http.StatusOK, himsisfo)
+	// himsisfo := Community{
+	// 	communityName: "Himsisfo",
+	// 	anggota: []People{
+	// 		{
+	// 			Name:   "Lily Janvieka",
+	// 			Age:    20,
+	// 			Status: "Singgle",
+	// 		},
+	// 		{
+	// 			Name:   "Lily Janvieka",
+	// 			Age:    20,
+	// 			Status: "Singgle",
+	// 		},
+	// 	},
+	// }
+	// fmt.Println(array2)
+	dummy.Dum()
+	c.Writer.Header().Set("Content-Type", "application/json")
+	c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
+	c.JSON(http.StatusOK, gin.H{
+		"data":  som3,
+		"array": array2,
+	})
 }
 
 func Api() {
 	r := gin.Default()
 	r.GET("/massage", massage)
 	r.GET("/kegiatan/:nama/:aksi", action)
-	r.GET("/data", data)
+	r.GET("/data", dummy.Data)
 	r.Run()
 }

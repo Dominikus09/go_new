@@ -18,6 +18,11 @@ type People struct {
 	Age    int
 	Status string
 }
+type Owner struct {
+	ownerName string
+	ig        string
+	image     string
+}
 
 func (orang People) sayHello(name string) {
 	fmt.Println("Selamat pagi", name, "salam dari ", orang.Name)
@@ -33,6 +38,29 @@ func main() {
 	}
 	slice := array[1:2]
 
+	array2 := []Owner{
+		{
+			ownerName: "Dominikus Andika Kurniawan",
+			ig:        "dominikusandika",
+			image:     "",
+		},
+		{
+			ownerName: "Dominikus Andika Kurniawan",
+			ig:        "dominikusandika",
+			image:     "",
+		},
+		{
+			ownerName: "Dominikus Andika Kurniawan",
+			ig:        "dominikusandika",
+			image:     "",
+		},
+		{
+			ownerName: "Dominikus Andika Kurniawan",
+			ig:        "dominikusandika",
+			image:     "",
+		},
+	}
+
 	camp := map[int]string{
 		1: "kamu",
 		2: "aku",
@@ -46,7 +74,8 @@ func main() {
 		Age:    20,
 		Status: "Single",
 	}
-	fmt.Println(andika)
+	fmt.Println(array2)
+
 	andika.sayHello("ivan")
 	// sa := SaySorry("devona")
 	// fmt.Println(sa)
