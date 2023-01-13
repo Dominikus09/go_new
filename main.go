@@ -29,56 +29,56 @@ func (orang People) sayHello(name string) {
 }
 
 func main() {
-	// fmt.Println("heloo")
-	// var array = [...]string{
-	// 	"satu",
-	// 	"dua",
-	// 	"tiga",
-	// 	"empat",
-	// }
-	// slice := array[1:2]
+	fmt.Println("heloo")
+	var array = [...]string{
+		"satu",
+		"dua",
+		"tiga",
+		"empat",
+	}
+	slice := array[1:2]
 
-	// array2 := []Owner{
-	// 	{
-	// 		ownerName: "Dominikus Andika Kurniawan",
-	// 		ig:        "dominikusandika",
-	// 		image:     "",
-	// 	},
-	// 	{
-	// 		ownerName: "Dominikus Andika Kurniawan",
-	// 		ig:        "dominikusandika",
-	// 		image:     "",
-	// 	},
-	// 	{
-	// 		ownerName: "Dominikus Andika Kurniawan",
-	// 		ig:        "dominikusandika",
-	// 		image:     "",
-	// 	},
-	// 	{
-	// 		ownerName: "Dominikus Andika Kurniawan",
-	// 		ig:        "dominikusandika",
-	// 		image:     "",
-	// 	},
-	// }
+	array2 := []Owner{
+		{
+			ownerName: "Dominikus Andika Kurniawan",
+			ig:        "dominikusandika",
+			image:     "",
+		},
+		{
+			ownerName: "Dominikus Andika Kurniawan",
+			ig:        "dominikusandika",
+			image:     "",
+		},
+		{
+			ownerName: "Dominikus Andika Kurniawan",
+			ig:        "dominikusandika",
+			image:     "",
+		},
+		{
+			ownerName: "Dominikus Andika Kurniawan",
+			ig:        "dominikusandika",
+			image:     "",
+		},
+	}
 
-	// camp := map[int]string{
-	// 	1: "kamu",
-	// 	2: "aku",
-	// }
-	// fmt.Println(slice)
-	// fmt.Println(camp[1])
+	camp := map[int]string{
+		1: "kamu",
+		2: "aku",
+	}
+	fmt.Println(slice)
+	fmt.Println(camp[1])
 
-	// fmt.Println(tryRecursive(2))
-	// andika := People{
-	// 	Name:   "Dominikus",
-	// 	Age:    20,
-	// 	Status: "Single",
-	// }
-	// fmt.Println(array2)
+	fmt.Println(tryRecursive(2))
+	andika := People{
+		Name:   "Dominikus",
+		Age:    20,
+		Status: "Single",
+	}
+	fmt.Println(array2)
 
-	// andika.sayHello("ivan")
-	// sa := SaySorry("devona")
-	// fmt.Println(sa)
+	andika.sayHello("ivan")
+	sa := SaySorry("devona")
+	fmt.Println(sa)
 	helper.SayPagi("Andika")
 	helper.Api()
 }
