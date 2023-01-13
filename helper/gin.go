@@ -72,22 +72,22 @@ func data(c *gin.Context) {
 	array2 := [...]Owner{
 		som3,
 		{
-			OwnerName: "Dominikus Andika Kurniawan",
+			OwnerName: "DOMINIKUS ANDIKA KURNIAWAN",
 			Ig:        "dominikusandika",
 			Image:     "",
 		},
 		{
-			OwnerName: "Dominikus Andika Kurniawan",
+			OwnerName: "WISESA GIAN KRESNOMUKTI PRAMIARTO",
 			Ig:        "dominikusandika",
 			Image:     "",
 		},
 		{
-			OwnerName: "Dominikus Andika Kurniawan",
+			OwnerName: "GALUH RHAKA WIRATAMA",
 			Ig:        "dominikusandika",
 			Image:     "",
 		},
 		{
-			OwnerName: "Dominikus Andika Kurniawan",
+			OwnerName: "MARCIAS LAURENSI DIVINASTO",
 			Ig:        "dominikusandika",
 			Image:     "",
 		},
